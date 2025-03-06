@@ -1,4 +1,4 @@
-<div class="header-right d-flex align-items-center">
+<!--<div class="header-right d-flex align-items-center">-->
 
   <img src="/img/NoelTaylor.jpg" alt="Photo" class="Noel img-fluid">
   <div class="contact ms-auto">
@@ -6,13 +6,23 @@
       <i class="contact-header-i bi bi-person-fill"></i>
       <h2>CONTACT</h2>
     </div>
+<!--    <div class="contact-phone">-->
+<!--      <i class="telephone-i bi bi-telephone-fill"></i>-->
+<!--      <div class="contact-text">-->
+<!--        <p>+1-718-310-5588</p>-->
+<!--        <p>+1-313-381-8167</p>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="contact-phone">
       <i class="telephone-i bi bi-telephone-fill"></i>
       <div class="contact-text">
-        <p>+1-718-310-5588</p>
-        <p>+1-313-381-8167</p>
+        <p *ngFor="let number of contactNumbers">{{ number }}</p>
+<!--        <p *ngFor="let number of contactNumbers; let i = index">-->
+<!--          <span *ngIf="i === 1">{{ number }}</span>  -->
+<!--        </p>-->
       </div>
     </div>
+
     <div class="contact-globe">
       <i class="globe-i bi bi-globe"></i>
       <div class="contact-text">
@@ -28,4 +38,4 @@
       </div>
     </div>
   </div>
-</div>
+<!--</div>-->

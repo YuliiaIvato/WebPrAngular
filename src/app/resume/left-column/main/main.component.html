@@ -69,9 +69,12 @@
 
   <div class="language-boxes folding-content">
     <div class="row">
-      <div class="language col text-center border">English</div>
-      <div class="language col text-center border" style="min-width: 100px;">Spanish</div>
-      <div class="language col text-center border" style="min-width: 100px;">French</div>
+      <div *ngFor="let language of languages" class="language col text-center border">
+        {{ language }}
+      </div>
+<!--      <div class="language col text-center border">English</div>-->
+<!--      <div class="language col text-center border" style="min-width: 100px;">Spanish</div>-->
+<!--      <div class="language col text-center border" style="min-width: 100px;">French</div>-->
     </div>
   </div>
 

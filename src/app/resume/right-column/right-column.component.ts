@@ -5,9 +5,8 @@ import { MainComponent } from './main/main.component';
 @Component({
   selector: 'app-right-column',
   imports: [HeaderComponent, MainComponent],
+  standalone: true,
   templateUrl: './right-column.component.html',
-  styleUrl: './right-column.component.scss'
+  styleUrls: ['./right-column.component.scss'] // Виправлено!
 })
-export class RightColumnComponent {
-
-}
+export class RightColumnComponent {}

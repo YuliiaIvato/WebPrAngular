@@ -4,10 +4,9 @@ import { MainComponent } from './main/main.component';
 
 @Component({
   selector: 'app-left-column',
+  standalone: true,
   imports: [HeaderComponent, MainComponent],
   templateUrl: './left-column.component.html',
   styleUrl: './left-column.component.scss'
 })
-export class LeftColumnComponent {
-
-}
+export class LeftColumnComponent {}
