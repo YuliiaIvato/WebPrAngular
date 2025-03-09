@@ -9,5 +9,9 @@ import {CommonModule} from '@angular/common';
   styleUrl: './hobbies.component.scss'
 })
 export class HobbiesComponent {
-  languages: string[] = ['English', 'Spanish', 'French'];
+  hobbies = [
+    { name: 'Book Reading', progress: 70 },
+    { name: 'Traveling', progress: 70 },
+    { name: 'Playing Chess', progress: 70 }
+  ];
 }

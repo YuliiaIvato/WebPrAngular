@@ -1,30 +1,11 @@
-<section class="hobbies">
+<div class="header-i">
+  <i class="main-i bi bi-puzzle"></i>
+  <h2>HOBBIES</h2>
+</div>
 
-  <div class="header-i">
-    <i class="main-i bi bi-puzzle"></i>
-    <h2>HOBBIES</h2>
-    <span class="triangle"></span>
+<div *ngFor="let hobby of hobbies" class="progress-container">
+  <p>{{ hobby.name }}</p>
+  <div class="progress-bar">
+    <div class="progress" [style.width]="hobby.progress + '%'"></div>
   </div>
-
-  <div class="folding-content">
-    <div class="progress-container">
-      <p>Book Reading</p>
-      <div class="progress-bar">
-        <div class="progress" style="width: 70%;"></div>
-      </div>
-    </div>
-    <div class="progress-container">
-      <p>Traveling</p>
-      <div class="progress-bar">
-        <div class="progress" style="width: 70%;"></div>
-      </div>
-    </div>
-    <div class="progress-container">
-      <p>Playing Chess</p>
-      <div class="progress-bar">
-        <div class="progress" style="width: 70%;"></div>
-      </div>
-    </div>
-  </div>
-
-</section>
+</div>

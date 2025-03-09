@@ -1,17 +1,26 @@
+:host {
+  display: block; /* забезпечує, що компонент займає повний простір */
+  //padding: 70px; /* відступи всередині */
+  padding: 0 70px 70px 70px;
+  background-color: darkturquoise;
+}
+
+
+
 
 .right h3 {
   //font-size: 27px;
 }
 
 
-.right {
-  padding: 0;
-  background-color: white;
-}
-
-.main-left {
-  padding: 70px;
-}
+//.right {
+//  padding: 0;
+//  background-color: white;
+//}
+//
+//.main-left {
+//  padding: 70px;
+//}
 
 .main-right {
   padding: 0 70px 70px 70px;
@@ -50,15 +59,15 @@
   margin: 35px 0;
 }
 
-.main-right .horizontal-line {
+.horizontal-line {
   margin: 60px 0;
 }
 
-.main-left .horizontal-line:last-child {
+.horizontal-line:last-child {
   margin: 35px 0 0 0;
 }
 
-.main-right .horizontal-line:last-child {
+.horizontal-line:last-child {
   margin: 60px 0 0 0;
 }
 
