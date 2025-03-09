@@ -1,0 +1,31 @@
+.header-left {
+  background-color: white;
+  padding: 70px 0 70px 0;
+  display: flex;
+}
+
+.vertical-line {
+  width: 70px;
+  height: 390px;
+  background-color: #333;
+}
+
+.text-row {
+  padding-left: 35px; /* Відступ між лінією та текстом */
+  max-width: calc(100% - 70px); /* Максимальна ширина контейнера тексту */
+  flex-grow: 1; /* Дозволяє текстовому контейнеру займати залишок простору */
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 131px;
+  line-height: 1;
+}
+
+.text-row p {
+  font-size: 30px;
+  padding: 0 0 0 24px;
+  letter-spacing: 4px;
+}
+
+

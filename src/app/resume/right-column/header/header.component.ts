@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; //для *ngFor
+import {ContactComponent} from './contact/contact.component';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule], //для *ngFor
+  imports: [ContactComponent],
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  contactNumbers: string[] = ['+1-718-310-5588', '+1-313-381-8167'];
+
 }

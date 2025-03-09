@@ -1,0 +1,64 @@
+
+.right h3 {
+  //font-size: 27px;
+}
+
+
+.right {
+  padding: 0;
+  background-color: white;
+}
+
+.main-left {
+  padding: 70px;
+}
+
+.main-right {
+  padding: 0 70px 70px 70px;
+  background-color: white;
+}
+
+.main-i {
+  font-size: 40px; /* Розмір шрифту для іконки */
+  width: 60px; /* Ширина іконки */
+  height: 60px; /* Висота іконки */
+  align-items: center; /* Вирівнювання по вертикалі */
+  justify-content: center; /* Вирівнювання по горизонталі */
+  margin: 0 10px 28px 0; /* Відступ праворуч та знизу від іконки */
+  display: inline-flex; /* Додаємо flexbox для вирівнювання */
+  background-color: #333;
+  color: white;
+}
+
+.header-i h2 {
+  margin: 5px;
+}
+
+.header-i {
+  display: flex; /* Використання flexbox для вирівнювання */
+}
+
+
+
+.horizontal-line {
+  width: 100%;
+  height: 2px; /* Товщина лінії */
+  background-color: #333;
+}
+
+.main-left .horizontal-line {
+  margin: 35px 0;
+}
+
+.main-right .horizontal-line {
+  margin: 60px 0;
+}
+
+.main-left .horizontal-line:last-child {
+  margin: 35px 0 0 0;
+}
+
+.main-right .horizontal-line:last-child {
+  margin: 60px 0 0 0;
+}
+

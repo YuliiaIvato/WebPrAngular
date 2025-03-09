@@ -1,0 +1,32 @@
+.progress-container p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center; /* Вертикальне вирівнювання по центру */
+  margin-bottom: 12px; /* Відступ між прогрес-барами */
+  padding: 0;
+}
+
+.progress-container:last-child {
+  margin-bottom: 0; /* Прибираємо нижній відступ для останнього прогрес-бара */
+}
+
+.progress-bar {
+  width: 43%;
+  border: 2px solid #333; /* Обведення кольором */
+  background-color: transparent; /* Прозорий фон */
+  overflow: hidden;
+  height: 12px;
+  margin-left: auto; /* Вирівнюємо прогрес-бар по лівій лінії */
+}
+
+.progress {
+  background-color: #333;
+  height: 100%;
+  width: 0; /* Спочатку 0%, потім це змінюється через інлайн стиль в HTML */
+  transition: width 0.3s ease;
+  border-radius: 0;
+}

@@ -1,0 +1,19 @@
+<section class="languages">
+  <div class="header-i">
+    <i class="main-i bi bi-globe"></i>
+    <h2>LANGUAGES</h2>
+    <span class="triangle"></span>
+  </div>
+
+  <div class="language-boxes folding-content">
+    <div class="row">
+      <div *ngFor="let language of languages" class="language col text-center border">
+        {{ language }}
+      </div>
+      <!--      <div class="language col text-center border">English</div>-->
+      <!--      <div class="language col text-center border" style="min-width: 100px;">Spanish</div>-->
+      <!--      <div class="language col text-center border" style="min-width: 100px;">French</div>-->
+    </div>
+  </div>
+
+</section>
