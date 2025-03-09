@@ -12,4 +12,5 @@ import {HobbiesComponent} from './hobbies/hobbies.component';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+  isVisible = true;
 }

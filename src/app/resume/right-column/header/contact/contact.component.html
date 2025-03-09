@@ -5,7 +5,7 @@
     <i class="contact-header-i bi bi-person-fill"></i>
     <h2>CONTACT</h2>
   </div>
-  <div class="contact-phone">
+  <div class="contact-phone " *ngIf="isVisible">
     <i class="telephone-i bi bi-telephone-fill"></i>
     <div class="contact-text">
       <p *ngFor="let number of contactNumbers">{{ number }}</p>

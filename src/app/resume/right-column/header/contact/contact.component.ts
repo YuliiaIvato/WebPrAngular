@@ -10,4 +10,5 @@ import { CommonModule } from '@angular/common'; //для *ngFor
 })
 export class ContactComponent {
   contactNumbers: string[] = ['+1-718-310-5588', '+1-313-381-8167'];
+  isVisible = false;
 }
