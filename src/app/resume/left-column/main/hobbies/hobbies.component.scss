@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.main-i{
+  margin: 0 10px 18px 0; /* Відступ праворуч та знизу від іконки */
+}
+
+
+
 .progress-container:last-child {
   margin-bottom: 0; /* Прибираємо нижній відступ для останнього прогрес-бара */
 }

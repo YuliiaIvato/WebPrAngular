@@ -23,9 +23,18 @@
 
 <!--<div class="container-fluid" style="display: flex; ">-->
 <!--  <div class="row no-gutters" style="display: flex; align-items: stretch;"></div>-->
-<!--  <app-left-column></app-left-column>-->
-<!--  <app-right-column></app-right-column>-->
+<!--  <div class = "col-md-5>"  style="flex-direction: column"><app-left-column></app-left-column></div>-->
+<!--  <div class = "col-md-7>" style="flex-direction: column"><app-right-column></app-right-column></div>-->
 <!--</div>-->
 
-<app-left-column></app-left-column>
-<app-right-column></app-right-column>
+
+  <div  style="display: flex; align-items: stretch;">
+    <app-left-column class = "col-md-5"></app-left-column>
+    <app-right-column class = "col-md-7"></app-right-column>
+  </div>
+
+<!--<div class = "col-md-5>" ><app-left-column></app-left-column></div>-->
+<!--<div class = "col-md-7>" ><app-right-column></app-right-column></div>-->
+
+<!--<app-left-column></app-left-column>-->
+<!--<app-right-column></app-right-column>-->

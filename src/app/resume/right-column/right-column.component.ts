@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
   imports: [HeaderComponent, MainComponent],
   standalone: true,
   templateUrl: './right-column.component.html',
-  styleUrls: ['./right-column.component.scss'] // Виправлено!
+  styleUrls: ['./right-column.component.scss']
 })
-export class RightColumnComponent {}
+export class RightColumnComponent {
+}

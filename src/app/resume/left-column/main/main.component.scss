@@ -1,7 +1,11 @@
 :host {
   display: block; /* забезпечує, що компонент займає повний простір */
   padding: 70px; /* відступи всередині */
-  background-color: darkcyan;
+  background-color: #eee
+}
+
+.main-i{
+  margin: 0 10px 18px 0; /* Відступ праворуч та знизу від іконки */
 }
 
 
@@ -11,18 +15,12 @@
   background-color: #333;
 }
 
-.main-left .horizontal-line {
+.horizontal-line {
   margin: 35px 0;
 }
 
-.main-right .horizontal-line {
-  margin: 60px 0;
-}
-
-.main-left .horizontal-line:last-child {
+.horizontal-line:last-child {
   margin: 35px 0 0 0;
 }
 
-.main-right .horizontal-line:last-child {
-  margin: 60px 0 0 0;
-}
+

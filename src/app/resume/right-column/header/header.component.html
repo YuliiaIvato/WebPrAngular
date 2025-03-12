@@ -1,4 +1,9 @@
 <div class="header-right d-flex align-items-center">
   <img src="/img/NoelTaylor.jpg" alt="Photo" class="Noel img-fluid">
-  <app-contact></app-contact>
+  <app-contact
+    [phoneNumbers]="contact.phoneNumbers"
+    [website]="contact.website"
+    [email]="contact.email"
+    [address]="contact.address">
+  </app-contact>
 </div>

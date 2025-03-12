@@ -2,11 +2,8 @@
   display: block; /* забезпечує, що компонент займає повний простір */
   //padding: 70px; /* відступи всередині */
   padding: 0 70px 70px 70px;
-  background-color: darkturquoise;
+  background-color: white
 }
-
-
-
 
 .right h3 {
   //font-size: 27px;
@@ -55,19 +52,14 @@
   background-color: #333;
 }
 
-.main-left .horizontal-line {
-  margin: 35px 0;
-}
-
 .horizontal-line {
-  margin: 60px 0;
+  margin: 65px 0;
 }
 
 .horizontal-line:last-child {
-  margin: 35px 0 0 0;
+  margin: 65px 0 0 0;
 }
 
-.horizontal-line:last-child {
-  margin: 60px 0 0 0;
-}
+
+
 
