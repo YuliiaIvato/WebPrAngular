@@ -7,8 +7,9 @@ import { ResumeComponent } from './resume/resume.component';
   standalone: true,
   imports: [RouterOutlet, ResumeComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
   title = 'WebPrAngular';
 }

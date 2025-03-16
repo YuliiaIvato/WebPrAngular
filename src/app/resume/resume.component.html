@@ -1,40 +1,27 @@
-<!--<main class="body">-->
-<!--  <div class="container-fluid" style="display: flex;">-->
-<!--    <div class="row no-gutters resume">-->
-<!--      <app-left-column></app-left-column>-->
-<!--      <app-right-column></app-right-column>-->
-<!--    </div>-->
+<!--  <div  style="display: flex; align-items: stretch;">-->
+<!--    <app-left-column class = "col-md-5"></app-left-column>-->
+<!--    <app-right-column class = "col-md-7"></app-right-column>-->
 <!--  </div>-->
-<!--</main>-->
 
-<!--<main>-->
-<!--&lt;!&ndash;  <div class="a">&ndash;&gt;-->
-<!--&lt;!&ndash;    <app-left-column></app-left-column>&ndash;&gt;-->
-<!--&lt;!&ndash;    <app-right-column></app-right-column>&ndash;&gt;-->
-<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--  &lt;!&ndash; Виведення даних після GET-запиту &ndash;&gt;-->
+<!--  <div *ngIf="data">-->
+<!--    <pre>{{ data | json }}</pre>-->
+<!--  </div>-->
 
-<!--  <div class="container-fluid" style="display: flex; ">-->
-<!--    <div class="row no-gutters" style="display: flex; align-items: stretch;"></div>-->
-<!--    <app-left-column></app-left-column>-->
-<!--    <app-right-column></app-right-column>-->
-<!--  </div>>-->
-
-<!--</main>-->
-
-<!--<div class="container-fluid" style="display: flex; ">-->
-<!--  <div class="row no-gutters" style="display: flex; align-items: stretch;"></div>-->
-<!--  <div class = "col-md-5>"  style="flex-direction: column"><app-left-column></app-left-column></div>-->
-<!--  <div class = "col-md-7>" style="flex-direction: column"><app-right-column></app-right-column></div>-->
-<!--</div>-->
-
-
-  <div  style="display: flex; align-items: stretch;">
-    <app-left-column class = "col-md-5"></app-left-column>
-    <app-right-column class = "col-md-7"></app-right-column>
+  <div *ngIf="data">
+    <pre>{{ data | json }}</pre>
   </div>
 
-<!--<div class = "col-md-5>" ><app-left-column></app-left-column></div>-->
-<!--<div class = "col-md-7>" ><app-right-column></app-right-column></div>-->
+  <!-- Відображення відповіді після POST-запиту -->
+  <div *ngIf="postResponse">
+    <pre>{{ postResponse | json }}</pre>
+  </div>
 
-<!--<app-left-column></app-left-column>-->
-<!--<app-right-column></app-right-column>-->
+  <!-- Виведення повідомлення про помилку -->
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Кнопка для надсилання даних -->
+  <button (click)="submitData()">Submit Data</button>
+
