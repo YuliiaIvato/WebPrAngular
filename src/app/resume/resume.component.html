@@ -1,27 +1,4 @@
-<!--  <div  style="display: flex; align-items: stretch;">-->
-<!--    <app-left-column class = "col-md-5"></app-left-column>-->
-<!--    <app-right-column class = "col-md-7"></app-right-column>-->
-<!--  </div>-->
-
-<!--  &lt;!&ndash; Виведення даних після GET-запиту &ndash;&gt;-->
-<!--  <div *ngIf="data">-->
-<!--    <pre>{{ data | json }}</pre>-->
-<!--  </div>-->
-
-  <div *ngIf="data">
-    <pre>{{ data | json }}</pre>
+  <div  style="display: flex; align-items: stretch;">
+    <app-left-column class = "col-md-5"></app-left-column>
+    <app-right-column class = "col-md-7"></app-right-column>
   </div>
-
-  <!-- Відображення відповіді після POST-запиту -->
-  <div *ngIf="postResponse">
-    <pre>{{ postResponse | json }}</pre>
-  </div>
-
-  <!-- Виведення повідомлення про помилку -->
-  <div *ngIf="errorMessage" class="error">
-    {{ errorMessage }}
-  </div>
-
-  <!-- Кнопка для надсилання даних -->
-  <button (click)="submitData()">Submit Data</button>
-
