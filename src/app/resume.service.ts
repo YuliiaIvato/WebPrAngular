@@ -11,21 +11,23 @@ import { catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ResumeService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts/3';
+  private getUrl = 'https://jsonplaceholder.typicode.com/posts/3';
+  private postUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 
   // GET-запит для отримання даних
   getData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl).pipe(
+    return this.http.get<any>(this.getUrl).pipe(
       catchError(this.handleError)
     );
   }
 
   // POST-запит для надсилання даних
   postData(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data).pipe(
+    return this.http.post<any>(this.postUrl, data).pipe(
       catchError(this.handleError)
     );
   }
@@ -41,5 +43,3 @@ export class ResumeService {
     return throwError(() => new Error(errorMessage));
   }
 }
-
-
