@@ -13,3 +13,4 @@ import { ResumeComponent } from './resume/resume.component';
 export class AppComponent {
   title = 'WebPrAngular';
 }
+

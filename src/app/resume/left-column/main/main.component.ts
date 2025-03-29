@@ -37,7 +37,6 @@ export class MainComponent implements OnInit {
 }
 
 
-
 // export class ResumeComponent implements OnInit {
 //   data: any;  // Це для збереження отриманих даних з GET-запиту
 //   postResponse: any;  // Це для збереження відповіді після POST-запиту

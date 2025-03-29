@@ -12,9 +12,11 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 
+
 export class ResumeService {
   private getUrl = 'https://jsonplaceholder.typicode.com/posts/3';
   private postUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private localData: any[] = []; // Масив для локального збереження даних
 
   constructor(private http: HttpClient) { }
 
@@ -25,12 +27,19 @@ export class ResumeService {
     );
   }
 
-  // POST-запит для надсилання даних
+  // Метод для отримання збережених локально даних
+  getLocalData(): any[] {
+    return this.localData;
+  }
+
+  // для надсилання даних
   postData(data: any): Observable<any> {
+    this.localData.push(data); // Зберігаємо введені дані локально
     return this.http.post<any>(this.postUrl, data).pipe(
       catchError(this.handleError)
     );
   }
+
 
   // Обробка помилок
   private handleError(error: HttpErrorResponse) {
@@ -42,4 +51,6 @@ export class ResumeService {
     }
     return throwError(() => new Error(errorMessage));
   }
+
+
 }
