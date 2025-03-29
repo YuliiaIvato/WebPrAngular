@@ -43,6 +43,11 @@ export class ReferencesComponent {
   loadLocalData() {
     this.localReferences = this.resumeService.getLocalData(); // Отримання локальних даних
   }
+
+  clearLocalData() {
+    this.resumeService.clearLocalStorage();
+    this.localReferences = []; // Очищаємо локальний масив
+  }
 }
 
 

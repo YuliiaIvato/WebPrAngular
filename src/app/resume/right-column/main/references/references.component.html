@@ -18,6 +18,18 @@
       <p>Tel: +1-908-4987-5103</p>
       <p>Email: <a href="mailto:www.yourwebsite.com">www.yourwebsite.com</a></p>
     </div>
+
+    <div class="reference-item">
+      <button (click)="clearLocalData()">Clear the data</button>
+      <h3>YI</h3>
+      <ul>
+        <li *ngFor="let ref of localReferences">
+          <div>Address: {{ ref.address }}</div>
+          <div>Phone: {{ ref.phone }}</div>
+          <div>Email: {{ ref.email }}</div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -54,17 +66,7 @@
   <button type="submit" [disabled]="referenceForm.invalid">Submit</button>
 </form>
 
-<div class="reference-item">
-  <br>
-  <h3>YI</h3>
-  <ul>
-    <li *ngFor="let ref of localReferences">
-      <div>Address: {{ ref.address }}</div>
-      <div>Phone: {{ ref.phone }}</div>
-      <div>Email: {{ ref.email }}</div>
-    </li>
-  </ul>
-</div>
+
 
 
 
@@ -78,11 +80,9 @@
 <!--      <small *ngIf="referenceForm.controls['address'].errors?.['maxlength']">Address must be less than 200 characters long.</small>-->
 <!--    </div>-->
 <!--  </div>-->
-
 <!--  <div>-->
 <!--    <label for="phone">Phone:</label>-->
 <!--    <input id="phone" formControlName="phone" [value]="referenceForm.controls['phone'].value | phoneFormat" />-->
-
 <!--    <div *ngIf="referenceForm.controls['phone'].invalid && referenceForm.controls['phone'].touched">-->
 <!--      <small *ngIf="referenceForm.controls['phone'].errors?.['required']">Phone is required</small>-->
 <!--      <small *ngIf="referenceForm.controls['phone'].errors?.['minlength']">Phone must contain at least 10 digits.</small>-->
