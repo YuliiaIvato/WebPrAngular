@@ -1,0 +1,46 @@
+.nav-bar {
+  position: relative;
+  height: 50px;
+  background-color: #eeeeee;
+}
+
+.left {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.left button:hover {
+  color: cornflowerblue;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.center a:hover {
+  color: cornflowerblue;
+}

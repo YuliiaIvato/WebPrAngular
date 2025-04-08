@@ -1,0 +1,80 @@
+<!--<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">-->
+<!--  <label>Username:</label>-->
+<!--  <input type="text" formControlName="username" required />-->
+
+<!--  <label>Password:</label>-->
+<!--  <input type="password" formControlName="password" required />-->
+
+<!--  <button type="submit" [disabled]="registerForm.invalid">Register</button>-->
+<!--</form>-->
+
+
+<!--<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">-->
+<!--  <label>Username:</label>-->
+<!--  <input type="text" formControlName="username" required />-->
+<!--  <div *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched">-->
+<!--    <small *ngIf="registerForm.controls['username'].errors?.['required']">Username is required</small>-->
+<!--    <small *ngIf="registerForm.controls['username'].errors?.['taken']">Username is already taken</small>-->
+<!--    <small *ngIf="registerForm.controls['username'].errors?.['minlength']">Username must be at least 3 characters</small>-->
+
+<!--  </div>-->
+
+<!--  <label>Email:</label>-->
+<!--  <input type="email" formControlName="email" required />-->
+<!--  <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">-->
+<!--    <small *ngIf="registerForm.controls['email'].errors?.['required']">Email is required</small>-->
+<!--    <small *ngIf="registerForm.controls['email'].errors?.['email']">Invalid email format</small>-->
+<!--    <small *ngIf="registerForm.controls['email'].errors?.['taken']">Email is already registered</small>-->
+<!--  </div>-->
+
+<!--  <label>Password:</label>-->
+<!--  <input type="password" formControlName="password" required />-->
+<!--  <div *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">-->
+<!--    <small *ngIf="registerForm.controls['password'].errors?.['required']">Password is required</small>-->
+<!--    <small *ngIf="registerForm.controls['password'].errors?.['minlength']">Password must be at least 8 characters</small>-->
+<!--    <small *ngIf="registerForm.controls['password'].errors?.['pattern']">Password must contain letters and numbers</small>-->
+<!--  </div>-->
+
+<!--  <button type="submit" [disabled]="registerForm.invalid">Register</button>-->
+<!--</form>-->
+
+
+
+<div class="form-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>Username:</label>
+    <input type="text" formControlName="username" required />
+    <div *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched">
+      <small *ngIf="registerForm.controls['username'].errors?.['required']">Username is required</small>
+      <small *ngIf="registerForm.controls['username'].errors?.['taken']">Username is already taken</small>
+      <small *ngIf="registerForm.controls['username'].errors?.['minlength']">Username must be at least 3 characters</small>
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" required />
+    <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+      <small *ngIf="registerForm.controls['email'].errors?.['required']">Email is required</small>
+      <small *ngIf="registerForm.controls['email'].errors?.['email']">Invalid email format</small>
+      <small *ngIf="registerForm.controls['email'].errors?.['taken']">Email is already registered</small>
+    </div>
+
+    <label>Password:</label>
+    <div class="password-wrapper">
+      <input
+        [type]="showPassword ? 'text' : 'password'"
+        formControlName="password"
+        required
+      />
+      <button type="button" (click)="togglePasswordVisibility()">
+        {{ showPassword ? '🟢' : '🔴️' }}
+      </button>
+    </div>
+    <div *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+      <small *ngIf="registerForm.controls['password'].errors?.['required']">Password is required</small>
+      <small *ngIf="registerForm.controls['password'].errors?.['minlength']">Password must be at least 8 characters</small>
+      <small *ngIf="registerForm.controls['password'].errors?.['pattern']">Password must contain letters and numbers</small>
+    </div>
+
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>

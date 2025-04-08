@@ -1,0 +1,85 @@
+/* Стилі для контейнера форми */
+.form-container {
+  display: flex;
+  justify-content: center; /* по горизонталі */
+  align-items: center;     /* по вертикалі */
+  height: 100vh;           /* займає всю висоту екрану */
+  background-color: cornflowerblue;
+}
+
+/* Сама форма */
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Поля вводу */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Кнопка логіну */
+button[type="submit"] {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Стилі для пароля + кнопки в одному рядку */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Поле пароля всередині .password-wrapper */
+.password-wrapper input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Кнопка показу пароля */
+.password-wrapper button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* Стилі для повідомлень про помилки */
+small {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Поле вводу та помилка */
+div small {
+  display: block;
+}
+
+/* Загальні стилі для інпутів з помилками */
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
