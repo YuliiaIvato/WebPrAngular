@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';  // Імпортуємо RouterM
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['login.component.scss'],
-  imports: [ReactiveFormsModule, RouterModule, CommonModule], // Імпортуємо необхідний модуль для форм
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
 })
 
 export class LoginComponent {
@@ -17,43 +17,16 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
-      identifier: ['', [Validators.required]],  // Це або email, або username
-      password: ['', [Validators.required, Validators.minLength(6)]],  // Валідація пароля
+      identifier: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
-
-  // onSubmit() {
-  //   if (this.loginForm.valid) {
-  //     const { identifier, password } = this.loginForm.value;
-  //
-  //     // Отримуємо користувача з localStorage
-  //     const storedUser = localStorage.getItem('user');
-  //     if (storedUser) {
-  //       const user = JSON.parse(storedUser);
-  //
-  //       // Перевіряємо email або username та пароль
-  //       if (
-  //         (user.username === identifier || user.email === identifier) &&
-  //         user.password === password
-  //       ) {
-  //         // Якщо дані правильні, зберігаємо в localStorage, що користувач авторизований
-  //         localStorage.setItem('isAuthenticated', 'true');
-  //         this.router.navigate(['/resume']);  // Перехід на сторінку резюме
-  //       } else {
-  //         alert('Недійсні облікові дані');
-  //       }
-  //     } else {
-  //       alert('User not found');
-  //     }
-  //   }
-  // }
 
   onSubmit() {
     if (this.loginForm.valid) {
       const { identifier, password } = this.loginForm.value;
       const users = JSON.parse(localStorage.getItem('users') || '[]');
 
-      // Шукаємо користувача за username або email І паролем
       const matchedUser = users.find((user: any) => {
         return (
           (user.username === identifier || user.email === identifier) &&
@@ -66,18 +39,14 @@ export class LoginComponent {
         return;
       }
 
-      // Якщо знайшли користувача, логін відбувся
       localStorage.setItem('user', JSON.stringify(matchedUser));
       localStorage.setItem('isAuthenticated', 'true');
       this.router.navigate(['/resume']);
     }
   }
 
-
   showPassword = false;
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
-
-
 }

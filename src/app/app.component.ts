@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,9 +19,8 @@ export class AppComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onLogout() {
-    this.authService.logout();  // Викликаємо logout у сервісі
-    this.router.navigate(['/login']);  // Перенаправляємо на сторінку логіну
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
-
 }
 

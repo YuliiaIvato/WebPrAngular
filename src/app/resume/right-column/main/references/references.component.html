@@ -20,7 +20,6 @@
     </div>
 
     <div class="reference-item">
-      <button (click)="clearLocalData()">Clear the data</button>
       <h3>YI</h3>
       <ul>
         <li *ngFor="let ref of localReferences">
@@ -63,96 +62,8 @@
     </div>
   </div>
 
-  <button type="submit" [disabled]="referenceForm.invalid">Submit</button>
+  <div class="button-group">
+    <button type="submit" [disabled]="referenceForm.invalid">Submit</button>
+    <button type="button" class="clear-btn" (click)="clearLocalData()">Clear the data</button>
+  </div>
 </form>
-
-
-
-
-
-<!--<form [formGroup]="referenceForm" (ngSubmit)="onSubmit()">-->
-<!--  <div>-->
-<!--    <label for="address">Address:</label>-->
-<!--    <input id="address" formControlName="address" />-->
-<!--    <div *ngIf="referenceForm.controls['address'].invalid && referenceForm.controls['address'].touched">-->
-<!--      <small *ngIf="referenceForm.controls['address'].errors?.['required']">Address is required</small>-->
-<!--      <small *ngIf="referenceForm.controls['address'].errors?.['minlength']">Address must be at least 5 characters long.</small>-->
-<!--      <small *ngIf="referenceForm.controls['address'].errors?.['maxlength']">Address must be less than 200 characters long.</small>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <label for="phone">Phone:</label>-->
-<!--    <input id="phone" formControlName="phone" [value]="referenceForm.controls['phone'].value | phoneFormat" />-->
-<!--    <div *ngIf="referenceForm.controls['phone'].invalid && referenceForm.controls['phone'].touched">-->
-<!--      <small *ngIf="referenceForm.controls['phone'].errors?.['required']">Phone is required</small>-->
-<!--      <small *ngIf="referenceForm.controls['phone'].errors?.['minlength']">Phone must contain at least 10 digits.</small>-->
-<!--      <small *ngIf="referenceForm.controls['phone'].errors?.['maxlength']">Phone must contain at most 12 digits.</small>-->
-<!--    </div>-->
-
-<!--&lt;!&ndash;        <label for="phone">Phone:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;    <input id="phone" formControlName="phone" (input)="formatPhoneNumber()" />&ndash;&gt;-->
-<!--&lt;!&ndash;    <div *ngIf="referenceForm.controls['phone'].invalid && referenceForm.controls['phone'].touched">&ndash;&gt;-->
-<!--&lt;!&ndash;      <small *ngIf="referenceForm.controls['phone'].errors?.['required']">Phone is required</small>&ndash;&gt;-->
-<!--&lt;!&ndash;      <small *ngIf="referenceForm.controls['phone'].errors?.['minlength']">&ndash;&gt;-->
-<!--&lt;!&ndash;        Phone must contain at least 10 digits.&ndash;&gt;-->
-<!--&lt;!&ndash;      </small>&ndash;&gt;-->
-<!--&lt;!&ndash;      <small *ngIf="referenceForm.controls['phone'].errors?.['maxlength']">&ndash;&gt;-->
-<!--&lt;!&ndash;        Phone must contain at most 12 digits.&ndash;&gt;-->
-<!--&lt;!&ndash;      </small>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--  </div>-->
-
-<!--  <div>-->
-<!--    <label for="email">Email:</label>-->
-<!--    <input id="email" formControlName="email" />-->
-<!--    <div *ngIf="referenceForm.controls['email'].invalid && referenceForm.controls['email'].touched">-->
-<!--      <small *ngIf="referenceForm.controls['email'].errors?.['required']">Email is required</small>-->
-<!--      <small *ngIf="referenceForm.controls['email'].errors?.['email']">Please enter a valid email</small>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <button type="submit" [disabled]="referenceForm.invalid">Submit</button>-->
-
-<!--</form>-->
-
-
-<!--<form #referenceForm="ngForm" (ngSubmit)="onSubmit(referenceForm)">-->
-<!--  <div>-->
-<!--    <label for="address">Address:</label>-->
-<!--    <input type="text" id="address" name="address" [(ngModel)]="reference.address"-->
-<!--           required minlength="5" maxlength="200"  />-->
-<!--    <div *ngIf="referenceForm.controls['address']?.errors?.['required']">-->
-<!--      Address is required-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <label for="phone">Tel:</label>-->
-<!--    <input type="text" id="phone" name="phone" [(ngModel)]="reference.phone"-->
-<!--           required-->
-<!--           minlength="11"-->
-<!--           maxlength="15"-->
-<!--           (input)="formatPhoneNumber()"-->
-<!--           placeholder="+1-xxx-xxx-xxxx" />-->
-<!--&lt;!&ndash;           pattern="^\+1-\d{3}-\d{3}-\d{4}$"&ndash;&gt;-->
-<!--&lt;!&ndash;           placeholder="+1-xxx-xxx-xxxx" />&ndash;&gt;-->
-<!--    <div *ngIf="referenceForm.controls['phone']?.errors?.['pattern']">-->
-<!--      Invalid phone number-->
-<!--    </div>-->
-<!--    <div *ngIf="referenceForm.controls['phone']?.errors?.['required']">-->
-<!--      Phone is required-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <label for="email">Email:</label>-->
-<!--    <input type="email" id="email" name="email" [(ngModel)]="reference.email" required email />-->
-<!--    <div *ngIf="referenceForm.controls['email']?.errors?.['required']">-->
-<!--      Email is required-->
-<!--    </div>-->
-<!--    <div *ngIf="referenceForm.controls['email']?.errors?.['email']">-->
-<!--      Please enter a valid email-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <button type="submit" [disabled]="!referenceForm.form.valid">Submit</button>-->
-<!--</form>-->
-
-

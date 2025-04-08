@@ -19,3 +19,60 @@
 .main-i{
   margin: 0 10px 28px 0; /* Відступ праворуч та знизу від іконки */
 }
+
+
+/* Поля вводу */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Відступи під кожним полем */
+}
+
+/* Повідомлення про помилки */
+small {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Кнопка Submit */
+button[type="submit"] {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: deepskyblue;
+}
+
+/* Кнопка Clear */
+.clear-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+
+}
+
+.clear-btn:hover {
+  background-color: darkred;
+}

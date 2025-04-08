@@ -11,7 +11,7 @@ export const appRoutes: Routes = [
   { path: 'resume',
     component: ResumeComponent,
     canActivate: [AuthGuard]},
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Якщо шлях пустий — перенаправляємо на логін,
+  { path: '', redirectTo: '/login', pathMatch: 'full' },  // Якщо шлях пустий — перенаправляємо на login
   { path: '**', redirectTo: 'login' }
 ];
 
