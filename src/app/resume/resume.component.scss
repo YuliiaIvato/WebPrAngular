@@ -1,0 +1,27 @@
+
+
+.nav-bar {
+  position: relative;
+  height: 50px;
+  background-color: #eeeeee;
+}
+
+.left {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.left button:hover {
+  color: cornflowerblue;
+}

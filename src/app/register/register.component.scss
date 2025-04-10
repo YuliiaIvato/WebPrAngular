@@ -70,8 +70,8 @@ button[type="submit"] {
 /* Стилі для повідомлень про помилки */
 small {
   color: red;
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 14px;
+  //margin-top: 5px;
 }
 
 /* Поле вводу та помилка */
@@ -83,3 +83,16 @@ div small {
 input.ng-invalid.ng-touched {
   border-color: red;
 }
+
+
+.auth-switch {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-switch a {
+  color: cornflowerblue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
